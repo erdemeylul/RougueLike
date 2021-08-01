@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct RougueLikeApp: App {
+    @State var viewModel = BattleScreenViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
         }
     }
 }

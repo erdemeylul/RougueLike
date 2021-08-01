@@ -7,19 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA533CC626B523D300A618D9 /* BattleScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA533CC526B523D300A618D9 /* BattleScreenViewModel.swift */; };
+		CA533CC826B5268D00A618D9 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA533CC726B5268D00A618D9 /* Monster.swift */; };
+		CA533CCA26B5958A00A618D9 /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA533CC926B5958A00A618D9 /* HeroView.swift */; };
 		CAE3994826AAB9DB0030A3BB /* RougueLikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3994726AAB9DB0030A3BB /* RougueLikeApp.swift */; };
 		CAE3994A26AAB9DB0030A3BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3994926AAB9DB0030A3BB /* ContentView.swift */; };
 		CAE3994C26AAB9E00030A3BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAE3994B26AAB9E00030A3BB /* Assets.xcassets */; };
 		CAE3994F26AAB9E00030A3BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAE3994E26AAB9E00030A3BB /* Preview Assets.xcassets */; };
+		CAE3996126AAC2320030A3BB /* HeroStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3996026AAC2320030A3BB /* HeroStatsView.swift */; };
+		CAE3996426AAC4B50030A3BB /* HeroSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3996326AAC4B50030A3BB /* HeroSheetView.swift */; };
+		CAE3996626AAC8550030A3BB /* CollectiblesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3996526AAC8550030A3BB /* CollectiblesView.swift */; };
+		CAE3996A26AAD28A0030A3BB /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3996926AAD28A0030A3BB /* SingleCardView.swift */; };
+		CAE3996D26AAD4820030A3BB /* EnemyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3996C26AAD4820030A3BB /* EnemyView.swift */; };
+		CAE3997226AADF5B0030A3BB /* MainCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3997126AADF5B0030A3BB /* MainCardView.swift */; };
+		CAE3997426AAF32E0030A3BB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3997326AAF32E0030A3BB /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA533CC526B523D300A618D9 /* BattleScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleScreenViewModel.swift; sourceTree = "<group>"; };
+		CA533CC726B5268D00A618D9 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		CA533CC926B5958A00A618D9 /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
 		CAE3994426AAB9DB0030A3BB /* RougueLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RougueLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE3994726AAB9DB0030A3BB /* RougueLikeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RougueLikeApp.swift; sourceTree = "<group>"; };
 		CAE3994926AAB9DB0030A3BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CAE3994B26AAB9E00030A3BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAE3994E26AAB9E00030A3BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CAE3995026AAB9E00030A3BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAE3996026AAC2320030A3BB /* HeroStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroStatsView.swift; sourceTree = "<group>"; };
+		CAE3996326AAC4B50030A3BB /* HeroSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSheetView.swift; sourceTree = "<group>"; };
+		CAE3996526AAC8550030A3BB /* CollectiblesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectiblesView.swift; sourceTree = "<group>"; };
+		CAE3996926AAD28A0030A3BB /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
+		CAE3996C26AAD4820030A3BB /* EnemyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyView.swift; sourceTree = "<group>"; };
+		CAE3997126AADF5B0030A3BB /* MainCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardView.swift; sourceTree = "<group>"; };
+		CAE3997326AAF32E0030A3BB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +72,10 @@
 		CAE3994626AAB9DB0030A3BB /* RougueLike */ = {
 			isa = PBXGroup;
 			children = (
+				CAE3995926AABA020030A3BB /* Utils */,
+				CAE3995826AAB9FB0030A3BB /* Models */,
+				CAE3995726AAB9F40030A3BB /* ViewModels */,
+				CAE3995626AAB9EF0030A3BB /* Views */,
 				CAE3994726AAB9DB0030A3BB /* RougueLikeApp.swift */,
 				CAE3994926AAB9DB0030A3BB /* ContentView.swift */,
 				CAE3994B26AAB9E00030A3BB /* Assets.xcassets */,
@@ -67,6 +91,124 @@
 				CAE3994E26AAB9E00030A3BB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CAE3995626AAB9EF0030A3BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAE3995F26AAC17C0030A3BB /* BattleView */,
+				CAE3995A26AABFD40030A3BB /* LaunchScreen */,
+				CAE3995B26AABFE60030A3BB /* MenuScreen */,
+				CAE3995C26AAC04F0030A3BB /* SavedGames */,
+				CAE3995D26AAC0560030A3BB /* MewGame */,
+				CAE3995E26AAC11D0030A3BB /* TopDownRoomsView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CAE3995726AAB9F40030A3BB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CA533CC526B523D300A618D9 /* BattleScreenViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CAE3995826AAB9FB0030A3BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CAE3997326AAF32E0030A3BB /* Card.swift */,
+				CA533CC726B5268D00A618D9 /* Monster.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CAE3995926AABA020030A3BB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CAE3995A26AABFD40030A3BB /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		CAE3995B26AABFE60030A3BB /* MenuScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MenuScreen;
+			sourceTree = "<group>";
+		};
+		CAE3995C26AAC04F0030A3BB /* SavedGames */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SavedGames;
+			sourceTree = "<group>";
+		};
+		CAE3995D26AAC0560030A3BB /* MewGame */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MewGame;
+			sourceTree = "<group>";
+		};
+		CAE3995E26AAC11D0030A3BB /* TopDownRoomsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TopDownRoomsView;
+			sourceTree = "<group>";
+		};
+		CAE3995F26AAC17C0030A3BB /* BattleView */ = {
+			isa = PBXGroup;
+			children = (
+				CAE3996E26AADF140030A3BB /* Main */,
+				CAE3996B26AAD3C50030A3BB /* Top */,
+				CAE3996826AAD2420030A3BB /* Middle */,
+				CAE3996726AAD2310030A3BB /* Bottom */,
+			);
+			path = BattleView;
+			sourceTree = "<group>";
+		};
+		CAE3996726AAD2310030A3BB /* Bottom */ = {
+			isa = PBXGroup;
+			children = (
+				CAE3996026AAC2320030A3BB /* HeroStatsView.swift */,
+				CAE3996526AAC8550030A3BB /* CollectiblesView.swift */,
+				CA533CC926B5958A00A618D9 /* HeroView.swift */,
+			);
+			path = Bottom;
+			sourceTree = "<group>";
+		};
+		CAE3996826AAD2420030A3BB /* Middle */ = {
+			isa = PBXGroup;
+			children = (
+				CAE3996926AAD28A0030A3BB /* SingleCardView.swift */,
+				CAE3997126AADF5B0030A3BB /* MainCardView.swift */,
+			);
+			path = Middle;
+			sourceTree = "<group>";
+		};
+		CAE3996B26AAD3C50030A3BB /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				CAE3996C26AAD4820030A3BB /* EnemyView.swift */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		CAE3996E26AADF140030A3BB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CAE3996326AAC4B50030A3BB /* HeroSheetView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +280,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAE3996426AAC4B50030A3BB /* HeroSheetView.swift in Sources */,
+				CAE3997426AAF32E0030A3BB /* Card.swift in Sources */,
+				CA533CCA26B5958A00A618D9 /* HeroView.swift in Sources */,
+				CAE3996D26AAD4820030A3BB /* EnemyView.swift in Sources */,
 				CAE3994A26AAB9DB0030A3BB /* ContentView.swift in Sources */,
+				CAE3997226AADF5B0030A3BB /* MainCardView.swift in Sources */,
+				CAE3996A26AAD28A0030A3BB /* SingleCardView.swift in Sources */,
+				CAE3996126AAC2320030A3BB /* HeroStatsView.swift in Sources */,
+				CA533CC826B5268D00A618D9 /* Monster.swift in Sources */,
 				CAE3994826AAB9DB0030A3BB /* RougueLikeApp.swift in Sources */,
+				CA533CC626B523D300A618D9 /* BattleScreenViewModel.swift in Sources */,
+				CAE3996626AAC8550030A3BB /* CollectiblesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
