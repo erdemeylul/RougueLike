@@ -9,128 +9,16 @@ import SwiftUI
 
 struct HeroSheetView: View {
     @EnvironmentObject var viewModel: BattleScreenViewModel
-    
+    @State var isHeroPresented = false
+    @State var isMonsterPresented = false
 
-    //hero card
-    @State var startingOffsetY: CGFloat = UIScreen.main.bounds.height * 0.86
-    @State var currentDragOffsetY: CGFloat = 0
-    @State var endingDragOffsetY: CGFloat = 0
-    @State var showTitle = false
-
-    
-    //make cards slide into screen
-    @State var slide: Bool = false
-    
-
-    
     var body: some View {
         ZStack {
                 VStack{
-                    VStack{
-                        EnemyView(viewModel: viewModel)
-                            .padding(.bottom, 40)
-                            .overlay(
-                                Image("exclamation")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 50, height: 80)
-                                    .opacity(viewModel.wrongCombo ? 1 : 0)
-                                    .padding()
-                                ,alignment: .top
-                            )
-                            .overlay(
-                                Button(action: {
-                                    self.slide.toggle()
-                                    
-                                    withAnimation(.default){
-                                        viewModel.endTurn = true
-                                    }
-                                }, label: {
-                                    Text("ENDTURN")
-                                        .fontWeight(.heavy)
-                                        .padding()
-                                        .foregroundColor(.black)
-                                        .background(RoundedRectangle(cornerRadius: 12).fill(Color.white))
-                                }).opacity(viewModel.mana == 0 && !viewModel.comboInterval && !viewModel.endTurn ? 1 : 0)
-                                ,alignment: .bottomTrailing
-                            )
-                            .overlay(
-                                Button(action: {
-                                    self.slide.toggle()
-                                        withAnimation(.default){
-                                            viewModel.endTurn = false
-                                        }
-                                        viewModel.mana = 3
-                                }, label: {
-                                    Text("ENDTURN")
-                                        .fontWeight(.heavy)
-                                        .padding()
-                                        .foregroundColor(.black)
-                                        .background(RoundedRectangle(cornerRadius: 12).fill(Color.white))
-                                }).opacity(viewModel.endTurn && !viewModel.comboInterval && viewModel.endDefense ? 1 : 0)
-                                ,alignment: .bottomLeading
-                            )
-                            .overlay(
-                                Image("slash")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 200, height: 100)
-                                    .opacity(viewModel.hit ? 1 : 0)
-                            )
-                            .overlay(
-                                Text("\(viewModel.card.attack)")
-                                    .bold()
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .scaleEffect(viewModel.showNumber ? 1 : 0.1)
-                                    .opacity(viewModel.showNumber ? 0.8 : 0)
-                                    .offset(x: viewModel.showNumber ? 40 : 35, y: viewModel.showNumber ? -110 : -100)
-                                    .animation(Animation.interpolatingSpring(stiffness: 25, damping: 5, initialVelocity: 20).delay(0.3))
-                            )
-                            .overlay(
-                                Text("\(viewModel.card.comboEffect)")
-                                    .font(.title)
-                                    .foregroundColor(.orange)
-                                    .scaleEffect(viewModel.combo ? 1 : 0.2)
-                                    .opacity(viewModel.combo ? 1 : 0)
-                                    .offset(x: viewModel.combo ? 40 : 0, y: viewModel.combo ? -100 : 0)
-                                    .animation(Animation.interpolatingSpring(stiffness: 25, damping: 5, initialVelocity: 10).delay(0.3))
-                            )
-                    }
-                    .background(Color.black.opacity(0.000001))
-                    .onTapGesture {
-                        if viewModel.hit && viewModel.comboInterval{
-                            viewModel.combo = true
-                            viewModel.trimAmount -= CGFloat( Double(viewModel.card.comboEffect) / Double(viewModel.monster.life))
-                            
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                                withAnimation(.default){
-                                    viewModel.combo = false
-                                }
-                            }
-
-                        }else{
-                            viewModel.comboInterval = false
-                            
-                            viewModel.wrongCombo = true
-                            
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                                withAnimation(.default){
-                                    viewModel.wrongCombo = false
-                                }
-                            }
-                        }
-                    }
-
-                    
-                    
-                    if viewModel.endTurn{
-                        MainCardView(card: $viewModel.card, tapped: $viewModel.tapped, viewModel: viewModel)
-                            .offset(x: slide ? 0 : 500)
-                            .animation(Animation.interpolatingSpring(stiffness: 40, damping: 5).delay(0.3))
-                    }else{
-                        VStack {
-                            HeroView(viewModel: viewModel)
+                    ZStack {
+                        
+                        VStack{
+                            EnemyView(viewModel: viewModel)
                                 .overlay(
                                     Image("exclamation")
                                         .resizable()
@@ -140,7 +28,6 @@ struct HeroSheetView: View {
                                         .padding()
                                     ,alignment: .top
                                 )
-
                                 .overlay(
                                     Image("slash")
                                         .resizable()
@@ -149,30 +36,23 @@ struct HeroSheetView: View {
                                         .opacity(viewModel.hit ? 1 : 0)
                                 )
                                 .overlay(
-                                    Text("\(viewModel.card.attack)")
-                                        .bold()
-                                        .font(.title)
-                                        .foregroundColor(.white)
-                                        .scaleEffect(viewModel.showNumber ? 1 : 0.1)
-                                        .opacity(viewModel.showNumber ? 0.8 : 0)
-                                        .offset(x: viewModel.showNumber ? 40 : 35, y: viewModel.showNumber ? -110 : -100)
-                                        .animation(Animation.interpolatingSpring(stiffness: 25, damping: 5, initialVelocity: 20).delay(0.3))
+                                    CardAttackTextView(viewModel: viewModel)
                                 )
                                 .overlay(
-                                    Text("\(viewModel.card.comboEffect)")
-                                        .font(.title)
-                                        .foregroundColor(.orange)
-                                        .scaleEffect(viewModel.combo ? 1 : 0.2)
-                                        .opacity(viewModel.combo ? 1 : 0)
-                                        .offset(x: viewModel.combo ? 40 : 0, y: viewModel.combo ? -100 : 0)
-                                        .animation(Animation.interpolatingSpring(stiffness: 25, damping: 5, initialVelocity: 10).delay(0.3))
+                                    ComboAttackTextView(viewModel: viewModel)
                                 )
                         }
                         .background(Color.black.opacity(0.000001))
                         .onTapGesture {
                             if viewModel.hit && viewModel.comboInterval{
                                 viewModel.combo = true
-                                viewModel.trimAmount -= CGFloat( Double(viewModel.card.comboEffect) / Double(viewModel.monster.life))
+                                
+                                withAnimation(.easeInOut(duration: 1)){
+                                    viewModel.trimAmount -= CGFloat( Double(viewModel.card.comboEffect) / Double(viewModel.monster.constantLife))
+                                }
+                                
+                                
+                                viewModel.monster.life -= viewModel.card.comboEffect
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                                     withAnimation(.default){
@@ -191,59 +71,134 @@ struct HeroSheetView: View {
                                     }
                                 }
                             }
+                    }.onLongPressGesture {
+                        isMonsterPresented = true
+                    }
+                        if viewModel.monsterDead && !viewModel.rewardClaimed{
+                            AwardView(viewModel: viewModel)
+                                .offset(x: viewModel.bringRewards ? 0 : -500)
+                                .animation(Animation.interpolatingSpring(stiffness: 40, damping: 5).delay(0.3))
+                        }
+                    }.sheet(isPresented: $isMonsterPresented
+                            ,content: {
+                        Text("hehe")
+                    })
+
+                   
+                    
+                    ZStack{
+                        VStack {
+                            HeroView(viewModel: viewModel)
+                                .overlay(
+                                    Image("exclamation")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 50, height: 80)
+                                        .opacity(viewModel.heroWrongCombo ? 1 : 0)
+                                        .padding()
+                                    ,alignment: .top
+                                )
+
+                                .overlay(
+                                    Image("slash")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 200, height: 100)
+                                        .opacity(viewModel.heroHit ? 1 : 0)
+                                )
+                                .overlay(
+                                    CardDefenseTextView(viewModel: viewModel)
+                                )
+                                .overlay(
+                                    ComboDefenseTextView(viewModel: viewModel)
+                                )
+                        }
+                        .background(Color.black.opacity(0.000001))
+                        .onTapGesture {
+                            if viewModel.lastStand{
+                                if viewModel.heroHit && viewModel.heroComboInterval{
+                                    viewModel.remainingCards = cards
+                                    viewModel.usedCards = []
+                                }else{
+                                    viewModel.remainingCards = []
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                        viewModel.deadOrAlive = true
+                                    }
+                                }
+                            }else{
+                                if viewModel.heroHit && viewModel.heroComboInterval{
+                                    viewModel.heroCombo = true
+                                    withAnimation(.easeInOut(duration: 1)){
+                                        viewModel.heroTrimAmount += CGFloat( Double(viewModel.hero.defenseCombo[0]) / Double(viewModel.hero.constantLife))
+                                    }
+                                    
+                                    
+                                    if viewModel.hero.life + viewModel.hero.defenseCombo[0] <= viewModel.hero.constantLife{
+                                        viewModel.hero.life += viewModel.hero.defenseCombo[0]
+                                    }else{
+                                        viewModel.hero.life +=
+                                        ((viewModel.hero.life + viewModel.hero.defenseCombo[0]) - viewModel.hero.constantLife)
+                                    }
+                                    
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                                        withAnimation(.default){
+                                            viewModel.heroCombo = false
+                                        }
+                                    }
+                                }else{
+                                    
+                                    viewModel.heroWrongCombo = true
+                                    viewModel.heroComboInterval = false
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                                        withAnimation(.default){
+                                            viewModel.heroWrongCombo = false
+                                        }
+                                    }
+                                }
+                            }
+                          
+                        }
+                        .onLongPressGesture {
+                            isHeroPresented = true
+                        }
+                        .sheet(isPresented: $isHeroPresented, content: {
+                            CollectiblesView()
+                        })
+                        if viewModel.mana > 0 && !viewModel.monsterDead{
+                            MainCardView(viewModel: viewModel)
+                                .offset(x: viewModel.slide ? 0 : 500)
+                                .animation(Animation.interpolatingSpring(stiffness: 40, damping: 5).delay(0.3))
                         }
                     }
-                    
-                    Spacer()
                 }
-                .blur(radius: viewModel.tapped ? 3 : 0)
+                .blur(radius: viewModel.tapped || viewModel.itemSelected ? 3 : 0)
+            
+            
+                
+
                 if viewModel.tapped{
                     SingleCardView(viewModel: viewModel)
-                        .transition(.scale)
+                        .scaleEffect(viewModel.tapped ? 1 : 0)
                 }
             
-            VStack {
-                VStack{
-                    VStack {
-                        Image(systemName: "chevron.up")
-                            .padding()
-                            .background(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).opacity(0.4))
-                            .cornerRadius(12)
-                            .rotationEffect(Angle(degrees: showTitle ? 180 : 0))
-                    }
-                    //HeroStatsView(viewModel: viewModel)
-                    CollectiblesView()
-                }
+               
+            
+            HStack{
+                EndDefenseButtonView(viewModel: viewModel)
+                Spacer()
+                ClaimButtonView(viewModel: viewModel)
+                Spacer()
+                EndTurnButtonView(viewModel: viewModel)
+                
+            }.sheet(isPresented: $viewModel.deadOrAlive, content: {
+                GameOverView()
+            })
+            
+            if viewModel.itemSelected{
+                SingleItemView(viewModel: viewModel)
             }
-            .frame(width: UIScreen.main.bounds.width)
-            .background(Color(#colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)))
-            .cornerRadius(30)
-            .offset(y: startingOffsetY)
-            .offset(y: currentDragOffsetY)
-            .offset(y: endingDragOffsetY)
-            .gesture(
-                DragGesture()
-                    .onChanged{ value in
-                        withAnimation(.spring()){
-                            currentDragOffsetY = value.translation.height
-                        }
-                    }.onEnded{ value in
-                        withAnimation(.spring()) {
-                            if currentDragOffsetY < -150{
-                                endingDragOffsetY = -startingOffsetY
-                                currentDragOffsetY = 0
-                                showTitle = true
-                            }else if endingDragOffsetY != 0 && currentDragOffsetY > 150 {
-                                endingDragOffsetY = 0
-                                currentDragOffsetY = 0
-                                showTitle = false
-                            }
-                            else{
-                                currentDragOffsetY = 0
-                            }
-                        }
-                    }
-            )
         }
         .background(
             Image("bg2")
@@ -253,7 +208,21 @@ struct HeroSheetView: View {
         )
         .onAppear{
             viewModel.combatStarted = true
-            slide = true
+            viewModel.slide = true
+            if viewModel.stage == 1{
+                let firstMonsters = Int.random(in: 0...4)
+                viewModel.monster = monsters[firstMonsters]
+            }else if viewModel.stage == 2{
+                let secondMonsters = Int.random(in: 5...9)
+                viewModel.monster = monsters[secondMonsters]
+            }else if viewModel.stage == 3{
+                let thirdMonsters = Int.random(in: 10...14)
+                viewModel.monster = monsters[thirdMonsters]
+            }
+        }
+        .onTapGesture {
+            viewModel.itemSelected = false
+            viewModel.rewardClaimed = true
         }
     }
 }

@@ -17,11 +17,22 @@ struct Monster: Identifiable, Codable{
     let enhancementTooltips: [String]
     let tooltip: String
     let attack: Int
-    let life: Int
+    var life: Int
     let image: String
+    let constantLife: Int
 }
 
 var monsters: [Monster] = [
-    Monster(name: "revenge", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack: 4, life: 400, image: "1"),
+    
+    
+    Monster(name: "revenge", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack: Int.random(in: 22...55), life: 200, image: "monster2", constantLife: 200),
+    
+    Monster(name: "revenge", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack: Int.random(in: 1...66), life: 400, image: "monster", constantLife: 400),
+    
+    Monster(name: "revenge", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack: Int.random(in: 28...77), life: 300, image: "monster3", constantLife: 300),
+    
+    Monster(name: "revenge", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack: Int.random(in: 13...55), life: 350, image: "monster4", constantLife: 350),
+    
+    Monster(name: "revenge", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack: Int.random(in: 33...44), life: 440, image: "monster5", constantLife: 440),
 
 ]

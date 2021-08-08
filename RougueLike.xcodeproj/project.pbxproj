@@ -10,6 +10,16 @@
 		CA533CC626B523D300A618D9 /* BattleScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA533CC526B523D300A618D9 /* BattleScreenViewModel.swift */; };
 		CA533CC826B5268D00A618D9 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA533CC726B5268D00A618D9 /* Monster.swift */; };
 		CA533CCA26B5958A00A618D9 /* HeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA533CC926B5958A00A618D9 /* HeroView.swift */; };
+		CA8C6F6B26B66808009D048E /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C6F6A26B66808009D048E /* Hero.swift */; };
+		CA8C6F6D26B66EFB009D048E /* EndTurnButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C6F6C26B66EFB009D048E /* EndTurnButtonView.swift */; };
+		CA8C6F6F26B67280009D048E /* EndDefenseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C6F6E26B67280009D048E /* EndDefenseButtonView.swift */; };
+		CA8C6F7126B6739B009D048E /* ComboAttackTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C6F7026B6739B009D048E /* ComboAttackTextView.swift */; };
+		CA8C6F7326B6744C009D048E /* CardAttackTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C6F7226B6744C009D048E /* CardAttackTextView.swift */; };
+		CA8C6F7626B683C2009D048E /* HeroCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C6F7526B683C2009D048E /* HeroCardView.swift */; };
+		CA8C6F7826B6951A009D048E /* ComboDefenseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C6F7726B6951A009D048E /* ComboDefenseTextView.swift */; };
+		CA8C6F7A26B6A31A009D048E /* CardDefenseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8C6F7926B6A31A009D048E /* CardDefenseTextView.swift */; };
+		CAAF4ECF26BECD8900DBED5F /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAF4ECE26BECD8900DBED5F /* GameOverView.swift */; };
+		CAD5FE8A26BD43D200983215 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD5FE8926BD43D200983215 /* Award.swift */; };
 		CAE3994826AAB9DB0030A3BB /* RougueLikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3994726AAB9DB0030A3BB /* RougueLikeApp.swift */; };
 		CAE3994A26AAB9DB0030A3BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3994926AAB9DB0030A3BB /* ContentView.swift */; };
 		CAE3994C26AAB9E00030A3BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAE3994B26AAB9E00030A3BB /* Assets.xcassets */; };
@@ -21,12 +31,28 @@
 		CAE3996D26AAD4820030A3BB /* EnemyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3996C26AAD4820030A3BB /* EnemyView.swift */; };
 		CAE3997226AADF5B0030A3BB /* MainCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3997126AADF5B0030A3BB /* MainCardView.swift */; };
 		CAE3997426AAF32E0030A3BB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3997326AAF32E0030A3BB /* Card.swift */; };
+		CAF4620126B6ACD4009BB00A /* ClaimButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4620026B6ACD4009BB00A /* ClaimButtonView.swift */; };
+		CAF4620326B6B1B2009BB00A /* AwardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4620226B6B1B2009BB00A /* AwardView.swift */; };
+		CAF4620526B6B725009BB00A /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4620426B6B725009BB00A /* Item.swift */; };
+		CAF4620826B7B124009BB00A /* SingleItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF4620726B7B124009BB00A /* SingleItemView.swift */; };
+		CAF9379926B81969002709FA /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF9379826B81969002709FA /* CircleButtonAnimationView.swift */; };
+		CAF9379B26B81E6D002709FA /* CircleButtonNoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF9379A26B81E6D002709FA /* CircleButtonNoneView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CA533CC526B523D300A618D9 /* BattleScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleScreenViewModel.swift; sourceTree = "<group>"; };
 		CA533CC726B5268D00A618D9 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		CA533CC926B5958A00A618D9 /* HeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroView.swift; sourceTree = "<group>"; };
+		CA8C6F6A26B66808009D048E /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		CA8C6F6C26B66EFB009D048E /* EndTurnButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndTurnButtonView.swift; sourceTree = "<group>"; };
+		CA8C6F6E26B67280009D048E /* EndDefenseButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndDefenseButtonView.swift; sourceTree = "<group>"; };
+		CA8C6F7026B6739B009D048E /* ComboAttackTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComboAttackTextView.swift; sourceTree = "<group>"; };
+		CA8C6F7226B6744C009D048E /* CardAttackTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAttackTextView.swift; sourceTree = "<group>"; };
+		CA8C6F7526B683C2009D048E /* HeroCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCardView.swift; sourceTree = "<group>"; };
+		CA8C6F7726B6951A009D048E /* ComboDefenseTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComboDefenseTextView.swift; sourceTree = "<group>"; };
+		CA8C6F7926B6A31A009D048E /* CardDefenseTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDefenseTextView.swift; sourceTree = "<group>"; };
+		CAAF4ECE26BECD8900DBED5F /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
+		CAD5FE8926BD43D200983215 /* Award.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		CAE3994426AAB9DB0030A3BB /* RougueLike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RougueLike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE3994726AAB9DB0030A3BB /* RougueLikeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RougueLikeApp.swift; sourceTree = "<group>"; };
 		CAE3994926AAB9DB0030A3BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +66,12 @@
 		CAE3996C26AAD4820030A3BB /* EnemyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyView.swift; sourceTree = "<group>"; };
 		CAE3997126AADF5B0030A3BB /* MainCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCardView.swift; sourceTree = "<group>"; };
 		CAE3997326AAF32E0030A3BB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		CAF4620026B6ACD4009BB00A /* ClaimButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaimButtonView.swift; sourceTree = "<group>"; };
+		CAF4620226B6B1B2009BB00A /* AwardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardView.swift; sourceTree = "<group>"; };
+		CAF4620426B6B725009BB00A /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		CAF4620726B7B124009BB00A /* SingleItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemView.swift; sourceTree = "<group>"; };
+		CAF9379826B81969002709FA /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
+		CAF9379A26B81E6D002709FA /* CircleButtonNoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonNoneView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA8C6F7426B683B1009D048E /* HeroCardView */ = {
+			isa = PBXGroup;
+			children = (
+				CA8C6F7526B683C2009D048E /* HeroCardView.swift */,
+			);
+			path = HeroCardView;
+			sourceTree = "<group>";
+		};
+		CAAF4ECD26BECD7500DBED5F /* GameOverView */ = {
+			isa = PBXGroup;
+			children = (
+				CAAF4ECE26BECD8900DBED5F /* GameOverView.swift */,
+			);
+			path = GameOverView;
+			sourceTree = "<group>";
+		};
 		CAE3993B26AAB9DB0030A3BB = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +144,8 @@
 		CAE3995626AAB9EF0030A3BB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CAAF4ECD26BECD7500DBED5F /* GameOverView */,
+				CA8C6F7426B683B1009D048E /* HeroCardView */,
 				CAE3995F26AAC17C0030A3BB /* BattleView */,
 				CAE3995A26AABFD40030A3BB /* LaunchScreen */,
 				CAE3995B26AABFE60030A3BB /* MenuScreen */,
@@ -117,8 +167,11 @@
 		CAE3995826AAB9FB0030A3BB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CAD5FE8926BD43D200983215 /* Award.swift */,
 				CAE3997326AAF32E0030A3BB /* Card.swift */,
 				CA533CC726B5268D00A618D9 /* Monster.swift */,
+				CA8C6F6A26B66808009D048E /* Hero.swift */,
+				CAF4620426B6B725009BB00A /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,6 +221,7 @@
 		CAE3995F26AAC17C0030A3BB /* BattleView */ = {
 			isa = PBXGroup;
 			children = (
+				CAF4620626B7B10C009BB00A /* Item */,
 				CAE3996E26AADF140030A3BB /* Main */,
 				CAE3996B26AAD3C50030A3BB /* Top */,
 				CAE3996826AAD2420030A3BB /* Middle */,
@@ -179,9 +233,13 @@
 		CAE3996726AAD2310030A3BB /* Bottom */ = {
 			isa = PBXGroup;
 			children = (
+				CAF9379826B81969002709FA /* CircleButtonAnimationView.swift */,
 				CAE3996026AAC2320030A3BB /* HeroStatsView.swift */,
 				CAE3996526AAC8550030A3BB /* CollectiblesView.swift */,
 				CA533CC926B5958A00A618D9 /* HeroView.swift */,
+				CA8C6F7726B6951A009D048E /* ComboDefenseTextView.swift */,
+				CA8C6F7926B6A31A009D048E /* CardDefenseTextView.swift */,
+				CAF9379A26B81E6D002709FA /* CircleButtonNoneView.swift */,
 			);
 			path = Bottom;
 			sourceTree = "<group>";
@@ -191,6 +249,9 @@
 			children = (
 				CAE3996926AAD28A0030A3BB /* SingleCardView.swift */,
 				CAE3997126AADF5B0030A3BB /* MainCardView.swift */,
+				CA8C6F6C26B66EFB009D048E /* EndTurnButtonView.swift */,
+				CA8C6F6E26B67280009D048E /* EndDefenseButtonView.swift */,
+				CAF4620026B6ACD4009BB00A /* ClaimButtonView.swift */,
 			);
 			path = Middle;
 			sourceTree = "<group>";
@@ -199,6 +260,9 @@
 			isa = PBXGroup;
 			children = (
 				CAE3996C26AAD4820030A3BB /* EnemyView.swift */,
+				CA8C6F7026B6739B009D048E /* ComboAttackTextView.swift */,
+				CA8C6F7226B6744C009D048E /* CardAttackTextView.swift */,
+				CAF4620226B6B1B2009BB00A /* AwardView.swift */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -209,6 +273,14 @@
 				CAE3996326AAC4B50030A3BB /* HeroSheetView.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		CAF4620626B7B10C009BB00A /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				CAF4620726B7B124009BB00A /* SingleItemView.swift */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,18 +352,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF4620526B6B725009BB00A /* Item.swift in Sources */,
+				CAD5FE8A26BD43D200983215 /* Award.swift in Sources */,
+				CA8C6F7A26B6A31A009D048E /* CardDefenseTextView.swift in Sources */,
+				CA8C6F6F26B67280009D048E /* EndDefenseButtonView.swift in Sources */,
+				CAF4620826B7B124009BB00A /* SingleItemView.swift in Sources */,
+				CA8C6F7826B6951A009D048E /* ComboDefenseTextView.swift in Sources */,
 				CAE3996426AAC4B50030A3BB /* HeroSheetView.swift in Sources */,
+				CAF9379B26B81E6D002709FA /* CircleButtonNoneView.swift in Sources */,
+				CAF4620126B6ACD4009BB00A /* ClaimButtonView.swift in Sources */,
 				CAE3997426AAF32E0030A3BB /* Card.swift in Sources */,
 				CA533CCA26B5958A00A618D9 /* HeroView.swift in Sources */,
 				CAE3996D26AAD4820030A3BB /* EnemyView.swift in Sources */,
+				CA8C6F7126B6739B009D048E /* ComboAttackTextView.swift in Sources */,
 				CAE3994A26AAB9DB0030A3BB /* ContentView.swift in Sources */,
+				CAAF4ECF26BECD8900DBED5F /* GameOverView.swift in Sources */,
 				CAE3997226AADF5B0030A3BB /* MainCardView.swift in Sources */,
 				CAE3996A26AAD28A0030A3BB /* SingleCardView.swift in Sources */,
 				CAE3996126AAC2320030A3BB /* HeroStatsView.swift in Sources */,
 				CA533CC826B5268D00A618D9 /* Monster.swift in Sources */,
 				CAE3994826AAB9DB0030A3BB /* RougueLikeApp.swift in Sources */,
+				CAF9379926B81969002709FA /* CircleButtonAnimationView.swift in Sources */,
 				CA533CC626B523D300A618D9 /* BattleScreenViewModel.swift in Sources */,
+				CA8C6F6B26B66808009D048E /* Hero.swift in Sources */,
+				CA8C6F7626B683C2009D048E /* HeroCardView.swift in Sources */,
 				CAE3996626AAC8550030A3BB /* CollectiblesView.swift in Sources */,
+				CA8C6F7326B6744C009D048E /* CardAttackTextView.swift in Sources */,
+				CAF4620326B6B1B2009BB00A /* AwardView.swift in Sources */,
+				CA8C6F6D26B66EFB009D048E /* EndTurnButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

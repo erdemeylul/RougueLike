@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Card: Identifiable, Codable{
+struct Card: Identifiable, Codable, Equatable, Hashable{
     var id = UUID().uuidString
     let name: String
     let type: String
@@ -20,15 +20,24 @@ struct Card: Identifiable, Codable{
     let cost: Int
     let image: String
     let comboEffect: Int
+    let background: String
+    let index: Int
 }
 
 var cards: [Card] = [
-    Card(name: "revenge", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack: 4, cost: 1, image: "1", comboEffect: 200),
-    Card(name: "bleed", type: "bleed", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["bleeds harder"], tooltip: "bleeds opponent for 3 turns", attack: 10, cost: 1, image: "1", comboEffect: 20),
-    Card(name: "revenge2", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack: 60, cost: 1, image: "1", comboEffect: 30),
-    Card(name: "bleed2", type: "bleed", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["bleeds harder"], tooltip: "bleeds opponent for 3 turns", attack: 2, cost: 1, image: "1", comboEffect: 40),
-    Card(name: "revenge3", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack: 30, cost: 1, image: "1", comboEffect: 50),
-    Card(name: "bleed3", type: "bleed", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["bleeds harder"], tooltip: "bleeds opponent for 3 turns", attack: 20, cost: 1, image: "1", comboEffect: 60),
-    Card(name: "revenge4", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack: 2, cost: 1, image: "1", comboEffect: 70),
-    Card(name: "bleed4", type: "bleed", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["bleeds harder"], tooltip: "bleeds opponent for 3 turns", attack: 50, cost: 1, image: "1", comboEffect: 80),
+    Card(name: "revenge", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack: Int.random(in: 22...45), cost: 1, image: "relic1", comboEffect: Int.random(in: 15...38), background: "back1", index: 0),
+    Card(name: "bleed", type: "bleed", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["bleeds harder"], tooltip: "bleeds opponent for 3 turns", attack: Int.random(in: 1...77), cost: 1, image: "relic2", comboEffect: Int.random(in: 1...77), background: "back2", index: 1),
+    Card(name: "revenge2", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack: Int.random(in: 33...35), cost: 1, image: "relic3", comboEffect: Int.random(in: 33...35), background: "back3", index: 2),
+    Card(name: "bleed2", type: "bleed", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["bleeds harder"], tooltip: "bleeds opponent for 3 turns", attack: Int.random(in: 16...48), cost: 1, image: "relic4", comboEffect: Int.random(in: 16...48), background: "back4", index: 3),
+    Card(name: "erdem", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack: Int.random(in: 22...55), cost: 1, image: "relic1", comboEffect: Int.random(in: 22...55), background: "back1", index: 4),
+    Card(name: "tugba", type: "bleed", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["bleeds harder"], tooltip: "bleeds opponent for 3 turns", attack: Int.random(in: 1...77), cost: 1, image: "relic2", comboEffect: Int.random(in: 1...77), background: "back2", index: 5),
+    Card(name: "eylul", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack:  Int.random(in: 33...35), cost: 1, image: "relic3", comboEffect:  Int.random(in: 33...35), background: "back3", index: 6),
+    Card(name: "siena", type: "bleed", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["bleeds harder"], tooltip: "bleeds opponent for 3 turns", attack: Int.random(in: 22...55), cost: 1, image: "relic4", comboEffect: Int.random(in: 22...55), background: "back4", index: 7),
+    Card(name: "nefise", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack: Int.random(in: 22...45), cost: 1, image: "relic1", comboEffect: Int.random(in: 22...45), background: "back1", index: 4),
+    Card(name: "mehmet", type: "bleed", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["bleeds harder"], tooltip: "bleeds opponent for 3 turns", attack: Int.random(in: 1...77), cost: 1, image: "relic2", comboEffect: Int.random(in: 1...77), background: "back2", index: 5),
+    Card(name: "suayip", type: "dd", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["strikes harder"], tooltip: "hits harder based on your missing life", attack: Int.random(in: 33...35), cost: 1, image: "relic3", comboEffect: Int.random(in: 33...35), background: "back3", index: 6),
+    Card(name: "fatos", type: "bleed", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["bleeds harder"], tooltip: "bleeds opponent for 3 turns", attack: Int.random(in: 22...45), cost: 1, image: "relic4", comboEffect: Int.random(in: 22...45), background: "back4", index: 7),
+    
 ]
+
+var examplecard: Card = Card(name: "erdem", type: "bleed", rarity: "common", numberOfEnhancements: 1, enhancementRarities: ["common"], enhancementTooltips: ["bleeds harder"], tooltip: "bleeds opponent for 3 turns", attack: 333, cost: 1, image: "relic4", comboEffect: 0, background: "back4", index: 222)
